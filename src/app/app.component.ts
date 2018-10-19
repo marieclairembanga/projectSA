@@ -42,7 +42,7 @@ import { VisitePage } from '../pages/visite/visite';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = Loginstep1Page;
 
   pages: Array<{title: string, component: any}>;
 
