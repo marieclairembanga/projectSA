@@ -16,3 +16,37 @@
 <ion-content padding>
 
 </ion-content>
+<ion-content padding class="appBackground">
+  <ion-card>
+    <ion-card-header>
+      Creation de Compte
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>Nom</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Pseudo</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.pseudo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>mot de passe</ion-label>
+          <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Telephone</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.phone"></ion-input>
+        </ion-item>
+
+
+        <button ion-button full color="success" (click)="signup()">Enregistrer</button>
+        <a href="#" (click)="login()">Login Page</a>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

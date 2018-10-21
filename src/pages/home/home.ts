@@ -5,7 +5,7 @@ import { RegimePage } from '../regime/regime';
 import { BilanPage } from '../bilan/bilan';
 
 @Component({
-  selector: 'page-home',
+  selector: 'page-Suivi médical',
   templateUrl: 'home.html'
 })
 export class HomePage {

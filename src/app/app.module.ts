@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+import { SplashScreen } from '@ionic-native/splash-screen';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
@@ -7,7 +9,6 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
 import { AidePage } from '../pages/aide/aide';
 import { AutomedPage } from '../pages/automed/automed';
 import { BilanPage } from '../pages/bilan/bilan';
@@ -38,6 +39,7 @@ import { SuivimaternitePage } from '../pages/suivimaternite/suivimaternite';
 import { TraitementPage } from '../pages/traitement/traitement';
 import { VaccinationPage } from '../pages/vaccination/vaccination';
 import { VisitePage } from '../pages/visite/visite';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,7 @@ import { VisitePage } from '../pages/visite/visite';
     VisitePage
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -119,7 +121,9 @@ import { VisitePage } from '../pages/visite/visite';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthServiceProvider,
+    AuthServiceProvider
   ]
 })
 export class AppModule {}

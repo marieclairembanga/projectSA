@@ -32,9 +32,7 @@ export class LoadingPage {
 
     loading.present();
 
-    /*setTimeout(() => {
-      this.navCtrl.push(SplashscreenPage);
-    }, 6000);*/
+
 
     setTimeout(() => {
       loading.dismiss();

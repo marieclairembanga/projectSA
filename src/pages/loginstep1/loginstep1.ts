@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Signup2Page } from '../signup2/signup2';
+import { HomePage } from '../home/home';
 /**
  * Generated class for the Loginstep1Page page.
  *
@@ -20,6 +21,15 @@ export class Loginstep1Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Loginstep1Page');
+  }
+  facebookRegister(){
+   this.navCtrl.push(HomePage);
+  }
+  googleRegister(){
+    this.navCtrl.push(HomePage);
+  }
+  phoneAccount(){
+    this.navCtrl.push(Signup2Page);
   }
 
 }
