@@ -78,8 +78,9 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     VisitePage
   ],
   imports: [
-    BrowserModule, HttpModule,
+    BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

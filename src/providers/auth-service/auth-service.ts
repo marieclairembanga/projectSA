@@ -1,21 +1,22 @@
 import { HttpClient } from '@angular/common/http';
+import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
-import { Injectable } from '@angular/core';
-let apiUrl = 'http://localhost/santalert/';
+let apiUrl = 'http://192.168.8.103/projetSA/santalert/';
+
 /*
   Generated class for the AuthServiceProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
+  See https://angular.io/guide/dependency-injection for more info on providers 192.168.8.103
   and Angular DI.
 */
 @Injectable()
 export class AuthServiceProvider {
 
-  constructor(public http: HttpClient) {
+  constructor(public http: Http) {
     console.log('Hello AuthServiceProvider Provider');
   }
 
-  postData(credentials, type) {
+  signIn(credentials, type) {
     return new Promise((resolve, reject) => {
       let headers = new Headers();
 

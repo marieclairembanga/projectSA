@@ -7,7 +7,7 @@ include"config.php";
 
 
 $nom=$_GET["nom"];
-$premon=$_GET["premon"];
+$prenom=$_GET["prenom"];
 $mot_de_passe=$_GET["mot_de_passe"];
 $telephone=$_GET["telephone"];
 $anneeNais=$_GET["anneeNais"];
@@ -64,14 +64,14 @@ $signeParticulier=$_GET["signeParticulier"];
 
 
 $sql="insert into patients(nom, premon, mot_de_passe, telephone, anneeNais, lieuNais, profession, filename, lieuService, dateCreate, telBureau, email, residencePrincipal,
- residenceSecondaire, nomPere, telPere, emailPere, professionPere, quartierPere, ruePere, nomMere, telMere, emailMere, professionMere, quartierMere, rueMere, nomTuteur, 
+ residenceSecondaire, nomPere, telPere, emailPere, professionPere, quartierPere, ruePere, nomMere, telMere, emailMere, professionMere, quartierMere, rueMere, nomTuteur,
  telTuteur, emailTuteur, professionTuteur, quartierTuteur, rueTuteur, proche1,tel_proche1, emailProche1, residenceProche1, professionProche1, proche2, tel_proche2, emailProche2,
-residenceProche2, professionProche2, proche3, tel_proche3, emailProche3, residenceProche3, professionProche3, groupeSanguin, allergie, incapacite, medecinFamille, assurance, 
-rhesus, observationPhisyque, signeParticulier) values('$nom', '$premon', '$mot_de_passe', '$telephone','$anneeNais', '$lieuNais', '$profession', '$filename', '$lieuService', 
-'$dateCreate', '$telBureau', '$email', '$residencePrincipal', '$residenceSecondaire', '$nomPere', '$telPere', '$emailPere', '$professionPere', '$quartierPere', '$ruePere', 
-'$nomMere', '$telMere', '$emailMere', '$professionMere', '$quartierMere', '$rueMere', '$nomTuteur', '$telTuteur', '$emailTuteur', '$professionTuteur', '$quartierTuteur', 
-'$rueTuteur', '$proche1', '$tel_proche1', '$emailProche1', '$residenceProche1', '$professionProche1', '$proche2', '$tel_proche2', '$emailProche2', '$residenceProche2', 
-'$professionProche2', '$proche3', '$tel_proche3', '$emailProche3', '$residenceProche3', '$professionProche3', '$groupeSanguin', '$allergie', '$incapacite', '$medecinFamille', 
+residenceProche2, professionProche2, proche3, tel_proche3, emailProche3, residenceProche3, professionProche3, groupeSanguin, allergie, incapacite, medecinFamille, assurance,
+rhesus, observationPhisyque, signeParticulier) values('$nom', '$premon', '$mot_de_passe', '$telephone','$anneeNais', '$lieuNais', '$profession', '$filename', '$lieuService',
+'$dateCreate', '$telBureau', '$email', '$residencePrincipal', '$residenceSecondaire', '$nomPere', '$telPere', '$emailPere', '$professionPere', '$quartierPere', '$ruePere',
+'$nomMere', '$telMere', '$emailMere', '$professionMere', '$quartierMere', '$rueMere', '$nomTuteur', '$telTuteur', '$emailTuteur', '$professionTuteur', '$quartierTuteur',
+'$rueTuteur', '$proche1', '$tel_proche1', '$emailProche1', '$residenceProche1', '$professionProche1', '$proche2', '$tel_proche2', '$emailProche2', '$residenceProche2',
+'$professionProche2', '$proche3', '$tel_proche3', '$emailProche3', '$residenceProche3', '$professionProche3', '$groupeSanguin', '$allergie', '$incapacite', '$medecinFamille',
 '$assurance', '$rhesus', '$observationPhisyque', '$signeParticulier')
     ";
 $res=mysqli_query($conn,$sql);

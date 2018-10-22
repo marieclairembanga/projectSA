@@ -17,9 +17,9 @@ import { HomePage } from '../home/home';
 })
 export class Signup2Page {
   responseData : any;
-  userData = {"name": "", "pseudo" : "", "password": "", "phone": ""};
+  userData = {"nom": "", "prenom" : "", "mot_de_passe": "", "telephone": ""};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authService :AuthServiceProvider ) {
   }
 
   ionViewDidLoad() {
@@ -27,7 +27,8 @@ export class Signup2Page {
   }
 
   signup(){
-    this.authService.postData(this.userData,'signup').then((result) => {
+
+    this.authService.signIn(this.userData,'patients-insert.php').then((result) => {
       this.responseData = result;
       if(this.responseData.userData){
         console.log(this.responseData);
