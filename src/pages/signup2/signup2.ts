@@ -27,12 +27,13 @@ export class Signup2Page {
   }
 
   signup(){
-
+  console.log("bonjour");
     this.authService.signIn(this.userData,'patients-insert.php').then((result) => {
       this.responseData = result;
+      console.log(result);
       if(this.responseData.userData){
         console.log(this.responseData);
-        localStorage.setItem('userData', JSON.stringify(this.responseData));
+        //localStorage.setItem('userData', JSON.stringify(this.responseData));
         this.navCtrl.push(HomePage);
       }
       else{ console.log("User already exists"); }
